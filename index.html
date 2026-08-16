@@ -312,9 +312,9 @@ class Component extends DCLogic {
     const accent = filter === 'growth' ? '#3F6663' : filter === 'brand' ? '#6E4A73' : '#8E4535';
     const tiles = filter === 'all' ? this.TILES : this.TILES.filter((p) => p.track === filter);
     const standfirst = filter === 'growth'
-      ? 'The systems that measure the growth — HubSpot workflows, SQL, BI dashboards, the whole plumbing.'
+      ? 'The systems that measure the growth: HubSpot workflows, SQL, Dashboards, the whole plumbing.'
       : filter === 'brand'
-      ? 'The things people actually see — brochures, menus, reels, storefronts, the whole show.'
+      ? 'The things people actually see: brochures,websites, menus, reels, storefronts, the whole show.'
       : 'Same person, two halves of one job. Pick an episode.';
 
     return {
