@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: #6E4A73; text-decoration: none; }
+    a:hover { color: #8E4535; text-decoration: underline; }
+    *:focus-visible { outline: 2px solid #C6A03F; outline-offset: 2px; }
+    ::selection { background: #C6A03F; color: #241E28; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes lineIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal], [data-hero-line] { animation: none !important; opacity: 1 !important; transform: none !important; }
+    }
+    /* mobile pass */
+    @media (max-width: 700px) {
+      main [style*="columns:2"], main [style*="columns: 2"] { columns: 1 !important; }
+      main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      main [style*="grid-column:span"], main [style*="grid-column: span"] { grid-column: auto !important; }
+      main [style*="zoom:0.78"], main [style*="zoom: 0.78"] { zoom: 1 !important; }
+      main figure, main figure > div { width: 100% !important; max-width: 100% !important; }
+      main img { width: 100% !important; height: auto !important; max-width: 100% !important; }
+      main [style*="zoom:0.78"] { zoom: 1 !important; }
+      a[href^="mailto"] { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; padding-left: 18px !important; padding-right: 18px !important; }
+      main [style*="max-width:68ch"], main [style*="max-width:56ch"] { max-width: 100% !important; }
+      nav [style*="padding:9px 16px"] { padding: 8px 12px !important; font-size: 12px !important; }
+    }
+    @media (max-width: 420px) {
+      a[href^="mailto"] { font-size: 15px !important; letter-spacing: 0 !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background-color:#EDE7DD;background-image:radial-gradient(circle,rgba(36,30,40,0.08) 1px,transparent 1px);background-size:24px 24px;color:#241E28;font-family:Inter,sans-serif;overflow-x:hidden;min-height:100vh">
+
+  <div style="position:fixed;top:0;left:0;height:4px;z-index:50;transition:background-color 600ms ease-out,width 200ms linear;width:{{ scrollPct }}%;background:{{ accent }}"></div>
+
+  <header style="position:sticky;top:0;z-index:40;background:rgba(237,231,221,0.94);backdrop-filter:blur(6px);border-bottom:3px solid #241E28">
+    <nav style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <span style="width:34px;height:34px;border-radius:50%;background:#6E4A73;color:#FBF8F3;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:15px">HG</span>
+        <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:#241E28">Himanshu Gupta</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700">
+        <a href="#work" style="color:#241E28">Work</a>
+        <span style="width:7px;height:7px;border-radius:50%;background:#6E4A73;display:inline-block"></span>
+        <a href="#about" style="color:#241E28">About</a>
+        <span style="width:7px;height:7px;border-radius:50%;background:#3F6663;display:inline-block"></span>
+        <a href="#contact" style="color:#241E28">Contact</a>
+        <a href="https://calendar.app.google/3jncZh9kwThyBx5y5" target="_blank" rel="noopener" style="color:#FBF8F3;background:#8E4535;padding:8px 15px;border-radius:4px;text-decoration:none;letter-spacing:0.08em">Book a call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" style="max-width:1180px;margin:0 auto;padding:0 24px">
+
+    <!-- HERO -->
+    <section style="padding:48px 0 64px">
+      <div data-reveal style="background:#241E28;border-radius:16px;padding:clamp(32px,6vw,72px);position:relative;overflow:hidden">
+        <p style="font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#C6A03F;margin:0 0 8px;transform:rotate(-2deg)">the one with the portfolio</p>
+        <h1 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,6.4vw,92px);line-height:1.02;letter-spacing:-0.01em;margin:0 0 40px;color:#FBF8F3">
+          <span data-hero-line style="display:block;animation:lineIn 0.7s ease-out both">Could I <em style="font-style:italic;color:#C6A03F">BE</em> any more ready</span>
+          <span data-hero-line style="display:block;animation:lineIn 0.7s ease-out 0.15s both">to help you <span style="display:inline-block;background:#C6A03F;color:#241E28;padding:2px 18px;border-radius:12px;transform:rotate(-1.5deg)">with your brand?</span></span>
+        </h1>
+        <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:stretch">
+        <div style="flex:2;min-width:280px;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between">
+          <div data-reveal style="display:flex;flex-direction:column;gap:16px;max-width:54ch;margin:0 0 32px">
+            <p style="font-size:18px;line-height:1.65;color:#EDE7DD;margin:0">
+              I build the systems that measure growth, and the things people actually see growing. Whether it's lifecycle marketing that finds the money slipping through the cracks, social that earns a second of someone's attention, a Google listing that decides whether they ever walk in, or a website they actually stay on — I'm here for all of it.
+            </p>
+            <p style="font-size:18px;line-height:1.65;color:#EDE7DD;margin:0">
+              Most people hire two of us for this. The one who reads the funnel, and the one who makes the beautiful thing. I've never understood why they're different people.
+            </p>
+            <p style="font-size:18px;line-height:1.65;color:#C6A03F;margin:0;font-weight:600">
+              Here's the pitch, minus the throat-clearing.
+            </p>
+          </div>
+          <div data-reveal style="display:flex;gap:14px;flex-wrap:wrap">
+            <a href="mailto:himanshugupta20092003@gmail.com" style="display:inline-flex;align-items:center;gap:8px;background:#C6A03F;color:#241E28;padding:14px 28px;font-size:16px;font-weight:700;border-radius:999px;text-decoration:none">Email me →</a>
+            <a href="#work" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#FBF8F3;padding:14px 28px;font-size:16px;font-weight:700;border-radius:999px;border:2px solid rgba(251,248,243,0.4);text-decoration:none">See the work</a>
+          </div>
+        </div>
+        <div style="flex:1.1;min-width:290px;display:flex;justify-content:center;align-items:stretch;position:relative;z-index:1">
+          <div style="position:relative;width:100%;max-width:340px;min-height:420px;background:#6E4A73;border-radius:6px;box-shadow:inset 0 0 0 8px #5b3d60,0 20px 40px rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center;padding:26px">
+            <span aria-hidden="true" style="position:absolute;top:16px;left:16px;right:16px;bottom:16px;border:3px solid rgba(36,30,40,0.22);border-radius:3px;pointer-events:none"></span>
+            <div style="position:relative;width:100%;aspect-ratio:4/5;background:#C6A03F;border-radius:3px;padding:16px;box-shadow:0 10px 26px rgba(0,0,0,0.3)">
+              <span aria-hidden="true" style="position:absolute;inset:9px;border:2px solid rgba(36,30,40,0.28);border-radius:2px;pointer-events:none"></span>
+              <div style="width:100%;height:100%;background:#241E28;border-radius:2px;overflow:hidden">
+                <img src="./assets/hero-portrait.webp" alt="Portrait of Himanshu Gupta" style="display:block;width:100%;height:100%;object-fit:cover">
+              </div>
+            </div>
+            <span aria-hidden="true" style="position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);background:#FBF8F3;color:#241E28;font-family:'Caveat',cursive;font-weight:700;font-size:19px;padding:4px 16px;border-radius:3px;box-shadow:0 6px 14px rgba(0,0,0,0.25);white-space:nowrap">Himanshu Gupta</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="padding:24px 0 72px;display:flex;gap:48px;flex-wrap:wrap-reverse;align-items:center">
+      <div style="flex:2;min-width:280px">
+        <p style="font-family:'Caveat',cursive;font-weight:700;font-size:22px;color:#3F6663;margin:0 0 6px;transform:rotate(-1.5deg)">the one where you get to know me</p>
+        <h2 data-reveal style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.5vw,46px);margin:0 0 22px">About Me</h2>
+        <div data-reveal style="display:flex;flex-direction:column;gap:14px;max-width:62ch">
+          <p style="font-size:17px;line-height:1.65;margin:0">I started as an engineer, learning to build systems that work whether or not anyone's watching. Somewhere around CGPA and a placement season, I noticed the systems I actually wanted to build weren't software. They were the ones that tell a business whether it's growing.</p>
+          <p style="font-size:17px;line-height:1.9;margin:0">So I moved into marketing. Most of my week goes to the work you're here for: <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.5em;line-height:0.9;color:#8E4535">content</strong> that sounds like a person wrote it, <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.5em;line-height:0.9;color:#6E4A73">social</strong> that earns its place on a feed, <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.5em;line-height:0.9;color:#3F6663">campaigns</strong> built to be measured, and <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.5em;line-height:0.9;color:#a07c1c">websites</strong> people actually stay on. The other half runs <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.5em;line-height:0.9;color:#8E4535">lifecycle marketing</strong> and the whole HubSpot ecosystem underneath it: pipelines, sales process, the complicated workflows. One half makes it, the other half proves it worked.</p>
+          <p style="font-size:17px;line-height:1.65;margin:0;color:#8E4535">One joke, since you asked: I minored in judging bad design. Nobody requested it, everybody gets it.</p>
+        </div>
+      </div>
+      <div style="order:-1;flex:1;min-width:220px;display:flex;justify-content:center;transform:rotate(-1.5deg)">
+        <div style="width:100%;max-width:320px;background:#FBF8F3;padding:14px 14px 44px;border-radius:4px;box-shadow:0 14px 30px rgba(36,30,40,0.2);position:relative">
+          <span aria-hidden="true" style="position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-5deg);width:76px;height:26px;background:#C6A03F;opacity:0.85;box-shadow:0 2px 5px rgba(36,30,40,0.18)"></span>
+          <div style="width:100%;aspect-ratio:4/5;background:#6E4A73;border-radius:2px;overflow:hidden">
+            <img src="./assets/about-photo.webp" alt="Himanshu Gupta at his graduation" style="display:block;width:100%;height:100%;object-fit:cover">
+          </div>
+          <p style="margin:10px 0 0;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:20px;color:#241E28">the one where he graduated</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK: episode guide, polaroid corkboard -->
+    <section id="work" style="padding:24px 0 24px">
+      <p style="font-family:'Caveat',cursive;font-weight:700;font-size:22px;color:#8E4535;margin:0 0 6px;transform:rotate(-1.5deg)">stories from the corkboard</p>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.5vw,46px);margin:0 0 14px">The Episode Guide</h2>
+      <p style="font-size:17px;line-height:1.65;max-width:60ch;margin:0 0 26px;transition:color 600ms ease-out;color:{{ accent }};font-weight:600">{{ standfirst }}</p>
+
+      <div role="group" aria-label="Filter work by track" style="display:inline-flex;border-radius:999px;overflow:hidden;margin-bottom:52px;gap:6px;background:#FBF8F3;padding:5px">
+        <button type="button" onClick="{{ setAll }}" style="padding:10px 20px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;border:none;border-radius:999px;cursor:pointer;background:{{ tabBgAll }};color:{{ tabColAll }};transition:all 600ms ease-out">All</button>
+        <button type="button" onClick="{{ setGrowth }}" style="padding:10px 20px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;border:none;border-radius:999px;cursor:pointer;background:{{ tabBgGrowth }};color:{{ tabColGrowth }};transition:all 600ms ease-out">Growth Systems</button>
+        <button type="button" onClick="{{ setBrand }}" style="padding:10px 20px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;border:none;border-radius:999px;cursor:pointer;background:{{ tabBgBrand }};color:{{ tabColBrand }};transition:all 600ms ease-out">Brand &amp; Content</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;margin-bottom:32px;padding:clamp(24px,4vw,44px);border-radius:12px;background-color:#8a5f33;background-image:radial-gradient(ellipse at 50% 45%,rgba(255,220,170,0.10) 0%,rgba(40,22,8,0.10) 55%,rgba(28,15,5,0.45) 100%),url('./assets/cork.png');background-size:100% 100%,256px 256px;background-repeat:no-repeat,repeat;border:16px solid transparent;border-image:linear-gradient(180deg,#c99a55,#a4762f 18%,#8a601f 50%,#a4762f 82%,#c99a55) 1;box-shadow:inset 0 0 0 3px rgba(40,22,8,0.55),inset 0 6px 18px rgba(30,16,6,0.5),0 18px 40px rgba(36,30,40,0.28);position:relative">
+        <sc-for list="{{ tiles }}" as="p" hint-placeholder-count="6">
+          <a href="{{ p.href }}" data-reveal style="display:block;position:relative;z-index:1;text-decoration:none;color:#241E28;transform:rotate({{ p.rot }});transition:transform 200ms ease,box-shadow 200ms ease" style-hover="transform:rotate(0deg) translateY(-8px)">
+            <div style="background:#FBF8F3;padding:12px 12px 18px;border-radius:4px;box-shadow:0 10px 24px rgba(36,30,40,0.18);position:relative">
+              <span aria-hidden="true" style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:26px;height:26px;border-radius:50%;background:{{ p.tape }};box-shadow:inset -3px -4px 7px rgba(0,0,0,0.45),inset 3px 4px 6px rgba(255,255,255,0.35),0 4px 7px rgba(36,30,40,0.4);z-index:2"></span>
+              <span aria-hidden="true" style="position:absolute;top:-9px;left:calc(50% - 6px);width:8px;height:6px;border-radius:50%;background:rgba(255,255,255,0.6);filter:blur(1px);z-index:3"></span>
+              <span aria-hidden="true" style="position:absolute;top:8px;left:calc(50% - 1px);width:3px;height:9px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,#9aa0a6,#4d5257);z-index:1"></span>
+              <div style="width:100%;aspect-ratio:4/3;background:{{ p.color }};border-radius:2px;overflow:hidden;position:relative">
+                <img loading="lazy" decoding="async" src="{{ p.img }}" alt="{{ p.client }}" style="display:block;width:100%;height:100%;object-fit:cover">
+                <span style="position:absolute;bottom:8px;left:8px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:#FBF8F3;background:rgba(0,0,0,0.45);padding:3px 8px;border-radius:999px;pointer-events:none">{{ p.trackLabel }}</span>
+              </div>
+              <p style="font-family:'Caveat',cursive;font-weight:700;font-size:22px;margin:14px 0 2px;line-height:1.15">{{ p.title }}</p>
+              <p style="font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#3F6663;margin:0">{{ p.client }} →</p>
+              <p style="font-size:11px;font-weight:600;letter-spacing:0.02em;color:#6b6470;margin:6px 0 0;line-height:1.4">{{ p.skills }}</p>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities" style="padding:40px 0">
+      <p style="font-family:'Caveat',cursive;font-weight:700;font-size:22px;color:#6E4A73;margin:0 0 6px;transform:rotate(-1.5deg)">here's the menu</p>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.5vw,46px);margin:0 0 28px">What I Do</h2>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div data-reveal style="flex:1;min-width:260px;background:#3F6663;border-radius:16px;padding:32px;color:#FBF8F3">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+            <svg width="30" height="26" viewBox="0 0 30 26" fill="none" stroke="#FBF8F3" stroke-width="2"><rect x="1" y="1" width="28" height="19" rx="2"></rect><line x1="7" y1="25" x2="23" y2="25"></line><line x1="15" y1="20" x2="15" y2="25"></line></svg>
+            <h3 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;margin:0">Growth Systems</h3>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.9">
+            <li>Strategy Building</li>
+            <li>Lifecycle Marketing</li>
+            <li>HubSpot</li>
+            <li>Excel</li>
+            <li>Google Ads</li>
+            <li>AEO</li>
+            <li>Claude</li>
+            <li>Gemini</li>
+            <li>ChatGPT</li>
+            <li>AI Video Creation</li>
+          </ul>
+        </div>
+        <div data-reveal style="flex:1;min-width:260px;background:#6E4A73;border-radius:16px;padding:32px;color:#FBF8F3">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" stroke="#FBF8F3" stroke-width="2"><path d="M4 22 C4 13 8 11 14 11 C20 11 24 13 24 22"></path><line x1="4" y1="22" x2="24" y2="22"></line></svg>
+            <h3 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;margin:0">Brand &amp; Content</h3>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.9">
+            <li>Content Strategy</li>
+            <li>Google Business Profile</li>
+            <li>Copywriting</li>
+            <li>Social Calendars</li>
+            <li>Reel Scripting</li>
+            <li>Carousel &amp; Campaign Design</li>
+            <li>Print-ready Brochures &amp; Menus</li>
+            <li>In-store Banners &amp; Signage</li>
+            <li>Website Design &amp; Delivery</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" style="padding:40px 0 96px">
+      <div data-reveal style="background:#8E4535;border-radius:16px;padding:clamp(32px,6vw,72px);color:#FBF8F3;text-align:center;position:relative;overflow:hidden">
+        <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.55">
+        <div aria-hidden="true" style="position:absolute;inset:clamp(14px,2.4vw,26px);pointer-events:none;border:2px solid #C6A03F;border-radius:8px;opacity:0.75"></div>
+        <p style="font-family:'Caveat',cursive;font-weight:700;font-size:24px;color:#EDE7DD;margin:0 0 6px;position:relative">how you doin'?</p>
+        <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5.5vw,58px);margin:0 0 20px">Let's Talk.</h2>
+        <p style="font-size:17px;line-height:1.65;max-width:56ch;margin:0 auto 32px;color:#EDE7DD">If any of this is useful to you, email me or directly book a call. I'll reply faster than a HubSpot workflow processes a new lead.</p>
+        <a href="mailto:himanshugupta20092003@gmail.com" style="display:inline-block;background:#C6A03F;color:#241E28;font-weight:700;font-size:clamp(16px,3vw,20px);padding:16px 32px;border-radius:999px;margin:0 0 28px;text-decoration:none">himanshugupta20092003@gmail.com</a>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-size:15px;font-weight:600">
+          <a href="tel:+917869196341" style="color:#FBF8F3">+91 78691 96341</a>
+          <span style="width:6px;height:6px;border-radius:50%;background:#C6A03F;display:inline-block"></span>
+          <a href="https://www.linkedin.com/in/himanshu-gupta-b11a84225/" target="_blank" rel="noopener" style="color:#FBF8F3">LinkedIn</a>
+          <span style="width:6px;height:6px;border-radius:50%;background:#EDE7DD;display:inline-block"></span>
+          <a href="https://www.instagram.com/himanshu._g._/" target="_blank" rel="noopener" style="color:#FBF8F3">Instagram</a>
+          <span style="width:6px;height:6px;border-radius:50%;background:#3F6663;display:inline-block"></span>
+          <a href="https://calendar.app.google/3jncZh9kwThyBx5y5" target="_blank" rel="noopener" style="color:#FBF8F3">Book a call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'all', scrollAccent: '#3F6663', scrollPct: 0 };
+
+  TILES = [
+    { num: '01', track: 'growth', color: '#3F6663', trackLabel: 'Growth Systems', title: "The One in the Founder's Office", client: 'Mavlers', slotId: 'tile-ep1', skills: 'Strategy · Lifecycle Marketing · HubSpot', img: './assets/tile-ep1.jpeg', href: './episode-01-founders-office.html', rot: '-2deg', tape: '#C6A03F' },
+    { num: '02', track: 'growth', color: '#8E4535', trackLabel: 'Growth Systems', title: 'The One With RevOps', client: 'One Metric', slotId: 'tile-ep2', skills: 'Lifecycle Marketing · HubSpot', img: './assets/tile-ep2.jpeg', href: './episode-02-revops.html', rot: '1.5deg', tape: '#6E4A73' },
+    { num: '03', track: 'growth', color: '#6E4A73', trackLabel: 'Growth Systems', title: 'The One Where He Ran a 120-Person Org at 21', client: 'AIESEC in India', slotId: 'tile-ep3', skills: 'Graphic Design · Marketing · Leadership · Customer Relationship Management', img: './assets/tile-ep3.jpeg', href: './episode-03-aiesec.html', rot: '-1deg', tape: '#8E4535' },
+    { num: '04', track: 'brand', color: '#6E4A73', trackLabel: 'Brand & Content', title: 'The One With the Coffee House', client: 'PAS Specialty Coffee', slotId: 'tile-ep4', skills: 'Google Business · Zomato Profile Management · Graphic Design · In-store Banners and Signage · Website', img: './assets/tile-ep4.png', href: './episode-04-coffee-house.html', rot: '2deg', tape: '#3F6663' },
+    { num: '05', track: 'brand', color: '#3F6663', trackLabel: 'Brand & Content', title: 'The One Where They All Move Abroad', client: 'PAX Edutainment', slotId: 'tile-ep5', skills: 'Social Media · Social Calendar · Graphic Design · Brochure Creation', img: './assets/tile-ep5.png', href: './episode-05-move-abroad.html', rot: '-1.5deg', tape: '#C6A03F' },
+    { num: '06', track: 'brand', color: '#8E4535', trackLabel: 'Brand & Content', title: 'The One With the Trip', client: 'PAX Travel', slotId: 'tile-ep6', skills: 'Graphic Design · Brochure Creation', img: './assets/tile-ep6.png', href: './episode-06-the-trip.html', rot: '1deg', tape: '#8E4535' },
+    { num: '07', track: 'brand', color: '#6E4A73', trackLabel: 'Brand & Content', title: 'The One He Posted Himself', client: 'Personal reels & content', slotId: 'tile-ep7', skills: 'Reel Scripting · Shooting · Editing · Content Strategy', img: './assets/tile-ep7.png', href: './episode-07-personal-reels.html', rot: '-2deg', tape: '#3F6663' }
+  ];
+
+  jumpToHash() {
+    const id = (window.location.hash || '').slice(1);
+    if (!id) return;
+    let tries = 0;
+    const go = () => {
+      const el = document.getElementById(id);
+      if (!el) { if (tries++ < 40) setTimeout(go, 100); return; }
+      let sc = el.parentElement, target = null;
+      while (sc) {
+        if (sc.scrollHeight > sc.clientHeight + 4 && /auto|scroll/.test(getComputedStyle(sc).overflowY)) { target = sc; break; }
+        sc = sc.parentElement;
+      }
+      const r = el.getBoundingClientRect();
+      if (target) {
+        target.scrollTo({ top: target.scrollTop + r.top - target.getBoundingClientRect().top - 16, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: window.scrollY + r.top - 16, behavior: 'smooth' });
+      }
+    };
+    setTimeout(go, 120);
+  }
+
+  componentDidMount() {
+    this.jumpToHash();
+    this._onHash = () => this.jumpToHash();
+    window.addEventListener('hashchange', this._onHash);
+    this._reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._onScroll = () => {
+      const h = document.documentElement;
+      const pct = h.scrollHeight > h.clientHeight ? (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 : 0;
+      this.setState({ scrollPct: Math.min(100, Math.max(0, pct)) });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+
+    if (!this._reduced && 'IntersectionObserver' in window) {
+      this._revealIo = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.style.animation = 'fadeUp 0.6s ease-out both';
+            this._revealIo.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      setTimeout(() => {
+        const vh = window.innerHeight || 800;
+        document.querySelectorAll('[data-reveal]').forEach((el) => {
+          if (el.getBoundingClientRect().top < vh * 0.95) {
+            el.style.opacity = '';
+            el.style.animation = 'fadeUp 0.6s ease-out both';
+            return;
+          }
+          el.style.opacity = '0';
+          this._revealIo.observe(el);
+        });
+      }, 300);
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._revealIo) this._revealIo.disconnect();
+  }
+
+  renderVals() {
+    const filter = this.state.filter;
+    const accent = filter === 'growth' ? '#3F6663' : filter === 'brand' ? '#6E4A73' : '#8E4535';
+    const tiles = filter === 'all' ? this.TILES : this.TILES.filter((p) => p.track === filter);
+    const standfirst = filter === 'growth'
+      ? 'The systems that measure the growth — HubSpot workflows, SQL, BI dashboards, the whole plumbing.'
+      : filter === 'brand'
+      ? 'The things people actually see — brochures, menus, reels, storefronts, the whole show.'
+      : 'Same person, two halves of one job. Pick an episode.';
+
+    return {
+      accent,
+      scrollPct: this.state.scrollPct,
+      standfirst,
+      tiles,
+      setAll: () => this.setState({ filter: 'all' }),
+      setGrowth: () => this.setState({ filter: 'growth' }),
+      setBrand: () => this.setState({ filter: 'brand' }),
+      tabBgAll: filter === 'all' ? '#241E28' : 'transparent',
+      tabColAll: filter === 'all' ? '#FBF8F3' : '#241E28',
+      tabBgGrowth: filter === 'growth' ? '#3F6663' : 'transparent',
+      tabColGrowth: filter === 'growth' ? '#FBF8F3' : '#241E28',
+      tabBgBrand: filter === 'brand' ? '#6E4A73' : 'transparent',
+      tabColBrand: filter === 'brand' ? '#FBF8F3' : '#241E28'
+    };
+  }
+}
+
+</script>
+</body>
+</html>
