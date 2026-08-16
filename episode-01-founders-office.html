@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; } body { margin: 0; }
+    a { color: #6E4A73; text-decoration: none; } a:hover { color: #8E4535; text-decoration: underline; }
+    *:focus-visible { outline: 2px solid #C6A03F; outline-offset: 2px; }
+    ::selection { background: #C6A03F; color: #241E28; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation: none !important; opacity: 1 !important; transform: none !important; } }
+    /* mobile pass */
+    @media (max-width: 700px) {
+      main [style*="columns:2"] { columns: 1 !important; }
+      main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      main [style*="grid-column:span"], main [style*="grid-column: span"] { grid-column: auto !important; }
+      main figure img { width: 100% !important; height: auto !important; }
+      main figure { max-width: 100% !important; }
+      main [style*="zoom:0.78"] { zoom: 1 !important; }
+      main [style*="transform:rotate"] { transform: none !important; }
+      a[href^="mailto"] { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; padding-left: 18px !important; padding-right: 18px !important; }
+      main [style*="max-width:68ch"], main [style*="max-width:56ch"] { max-width: 100% !important; }
+      nav [style*="padding:9px 16px"] { padding: 8px 12px !important; font-size: 12px !important; }
+    }
+    @media (max-width: 420px) {
+      a[href^="mailto"] { font-size: 15px !important; letter-spacing: 0 !important; }
+    }
+  </style>
+</helmet>
+<div style="background-color:#EDE7DD;background-image:radial-gradient(circle,rgba(36,30,40,0.08) 1px,transparent 1px);background-size:24px 24px;color:#241E28;font-family:Inter,sans-serif;overflow-x:hidden;min-height:100vh">
+  <header style="border-bottom:3px solid #241E28">
+    <nav style="max-width:900px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <a href="./index.html" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:#241E28">← Himanshu Gupta</a>
+      <div style="display:flex;align-items:center;gap:18px">
+        <a href="./index.html#work" style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:#3F6663">Episode Guide</a>
+        <a href="./index.html#contact" style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:#FBF8F3;background:#8E4535;padding:9px 16px;border-radius:4px">Contact</a>
+        <a href="https://calendar.app.google/3jncZh9kwThyBx5y5" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:#241E28;background:#C6A03F;padding:9px 16px;border-radius:4px">Book a call</a>
+      </div>
+    </nav>
+  </header>
+  <main style="max-width:900px;margin:0 auto;padding:0 24px">
+    <section style="padding:40px 0">
+      <div style="position:relative;border-radius:16px;padding:clamp(28px,6vw,56px);color:#FBF8F3;overflow:hidden;background-image:linear-gradient(150deg,rgba(63,102,99,0.92),rgba(36,30,40,0.85)),url('./assets/tile-ep1.jpeg');background-color:#3F6663;background-size:cover,cover;background-repeat:no-repeat,no-repeat;background-position:center,center center">
+        <span style="display:inline-block;background:rgba(251,248,243,0.18);padding:5px 12px;border-radius:999px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:20px">Episode 01 · Growth Systems</span>
+        <h1 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,6.5vw,60px);margin:0 0 20px;max-width:16ch">The One in the Founder's Office</h1>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:14px;font-weight:600">
+          <span>Mavlers</span><span aria-hidden="true">·</span><span>Jan 2026 – Present</span><span aria-hidden="true">·</span><span>Founder's Office Associate</span>
+        </div>
+      </div>
+    </section>
+    <section data-reveal style="padding:0 0 48px;display:flex;flex-direction:column;gap:20px;font-size:17px;line-height:1.7;max-width:68ch">
+      <p style="font-family:'Instrument Serif',serif;font-size:28px;margin:8px 0 0">What I did</p>
+      <p>Took ownership of the entire HubSpot instance and started with the unglamorous part: cleaning it. <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#8E4535">Data integrity and data sanity</strong> first, because every report built on a messy CRM is a confident wrong answer.</p>
+      <p>From there I <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#6E4A73">restructured the internal processes</strong> and rebuilt the workflows around them, automating the stages that were being held together by someone remembering to do them. Implemented <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#3F6663">lead scoring</strong> so the pipeline sorts itself by intent, and made sure no lead quietly falls out of the funnel between stages.</p>
+      <p>Went back to the top of the funnel and did the thinking that should come before any campaign: building out <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#a07c1c">buyer personas</strong>, defining the <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#8E4535">ideal customer profile</strong>, and analysing new markets worth entering rather than the ones we happened to already be in.</p>
+      <p>Ran and iterated on both <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#6E4A73">inbound and outbound campaigns</strong> against those personas, treating them as two genuinely different problems rather than one funnel with two doors. Worked on <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#3F6663">conversion rate optimisation</strong> across the journey, because the cheapest growth available is usually the traffic you're already paying for.</p>
+      <p><strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#a07c1c">Rebuilt reporting</strong> on top of a clean instance, which finally gave marketing and sales the same version of the truth: the handoff between them is now explicit rather than assumed. Built <strong style="font-family:'Caveat',cursive;font-weight:700;font-size:1.45em;line-height:0.9;color:#8E4535">multi-channel integrations</strong> so the data lands in one place instead of four, which is what makes the whole process measurable in the first place.</p>
+      <p style="color:#3F6663;font-family:'Caveat',cursive;font-weight:700;font-size:24px">Sitting next to the founder means seeing which numbers actually move the business, not which ones are easy to chart.</p>
+    </section>
+    <nav data-reveal style="display:flex;justify-content:space-between;padding:24px 0 64px;border-top:1px dashed rgba(198,160,63,0.6);font-size:14px;font-weight:700">
+      <span></span>
+      <a href="./episode-02-revops.html">Next: RevOps →</a>
+    </nav>
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.style.animation = 'fadeUp 0.6s ease-out both'; io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    setTimeout(() => { const vh = window.innerHeight || 800; document.querySelectorAll('[data-reveal]').forEach((el) => { if (el.getBoundingClientRect().top < vh * 0.95) { el.style.opacity = ''; el.style.animation = 'fadeUp 0.6s ease-out both'; return; } el.style.opacity = '0'; io.observe(el); }); }, 200);
+  }
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>
